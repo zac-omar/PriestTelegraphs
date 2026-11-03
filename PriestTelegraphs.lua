@@ -1815,11 +1815,13 @@ local function Choice(panel, label, when, choices, get, set)
 	local row = Row(panel, label, when);
 	local buttons = {};
 	for i = 1, 3 do
+		-- Lua 5.0 has one `i` for the whole loop, so each button keeps its own copy
+		local index = i;
 		local b = Button(row, "", 60, 18, function()
-			set(buttons[i].value);
+			set(buttons[index].value);
 			Refresh();
 		end);
-		buttons[i] = b;
+		buttons[index] = b;
 	end
 	table.insert(refreshers, function()
 		local list = choices;
