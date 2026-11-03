@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: Priest Telegraphs
+## Notes: Ground telegraphs for your priest's spells and their area effects. Type /tele for the options.
+## Version: 1.0
+## SavedVariables: PriestTelegraphsDB
+PriestTelegraphs.lua
